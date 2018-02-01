@@ -549,6 +549,7 @@
 			baseConfigurationReference = 78A6FDF668FAB2CABEE14336 /* Pods-Suncorp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83R4U55Z2F;
 				INFOPLIST_FILE = Suncorp/Info.plist;
@@ -565,6 +566,7 @@
 			baseConfigurationReference = CFAD9C4AAA5A20480E9090D3 /* Pods-Suncorp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83R4U55Z2F;
 				INFOPLIST_FILE = Suncorp/Info.plist;
