@@ -17,18 +17,34 @@ import Mapper
      "effectiveDate": "2017-12-21T08:40:51.620Z"
      }
 */
-struct TransactionsModel: Mappable {
+struct TransactionsModel: Decodable {
     
-    let id: Int
-    let description: String
-    let amount: Double
-    let effectiveDate: String
+    let id: Int?
+    let description: String?
+    let amount: Double?
+    let effectiveDate: String?
     
-    init(map: Mapper) throws {
-        try id = map.from("id")
-        try description = map.from("description")
-        try amount = map.from("amount")
-        try effectiveDate = map.from("effectiveDate")
+    init?(json: [String: Any]) throws {
+        id = (json["id"] as? Int)!
+        description = (json["description"] as? String)!
+        amount = (json["amount"] as? Double)!
+        effectiveDate = (json["effectiveDate"] as? String)!
     }
     
+    
+    static func getBalance(transactions: [TransactionsModel]) -> Double {
+        
+        var amount: Double = 0
+        
+        for transaction in transactions {
+            if transaction.amount! > 0.0 {
+                amount += transaction.amount!
+            }else{
+                amount -= transaction.amount!
+            }
+        }
+        
+        return amount;
+    }
+
 }

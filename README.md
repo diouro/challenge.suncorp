@@ -19,7 +19,7 @@ Any issues or doubts don’t hesitate to contact gabriel.pereira@suncorp.com.au
 
 ## Synopsis
 
-Project generated with a purpose of demostrate capable knowledge in Swift.
+Project generated with a purpose of demonstrate capable knowledge in Swift.
 
 ## Code Example
 

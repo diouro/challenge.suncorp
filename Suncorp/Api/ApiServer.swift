@@ -16,7 +16,7 @@ enum ApiServer {
 
 extension ApiServer: TargetType {
 
-    var baseURL: URL { return URL(string: "https://private-ddc1b2-transactions14.apiary-mock.com/")! }
+    var baseURL: URL { return URL(string: "https://private-ddc1b2-transactions14.apiary-mock.com")! }
     
     var path: String {
         switch self {
