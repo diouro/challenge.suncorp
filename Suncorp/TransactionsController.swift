@@ -78,6 +78,21 @@ class TransactionsController: UIViewController, UITableViewDelegate,UITableViewD
         return 80
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // It could have a global funciton to get the storyboard instance
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // Also could have a global to transiction
+        let transactionDetail = storyboard.instantiateViewController(withIdentifier: "TransactionInfoController") as! TransactionInfoController
+        transactionDetail.transaction = listTransaction[indexPath.row]
+        transactionDetail.modalTransitionStyle = UIModalTransitionStyle.partialCurl
+        self.present(transactionDetail, animated: true, completion: nil)
+
+        tblContent.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
